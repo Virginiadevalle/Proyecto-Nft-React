@@ -374,3 +374,7 @@ html {
   margin: 0;
   border-bottom: 1px solid var(--color-gris);
 }
+
+.pointer{
+  cursor: pointer;
+}

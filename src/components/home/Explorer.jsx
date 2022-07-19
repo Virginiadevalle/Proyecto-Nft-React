@@ -54,7 +54,7 @@ function Explorer() {
               </div>
             </div>
           </div>
-          <CardExplore />
+          <CardExplore  />
           <div className="text-center  pt-4 pb-5 ">
             <a href="#" className="btn btn-danger">
               Load More
