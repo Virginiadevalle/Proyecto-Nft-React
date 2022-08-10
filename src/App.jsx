@@ -23,9 +23,10 @@ function App() {
       {/* <Authors/> */}
       {/* <Contact/> */}
       {/* <Wallet/>  */}
-      {/* <Create/>  */}
+      <Create/> 
+      {/* <LogIn/>  */}
       {/* <AuthorProfile/>  */}
-      <ItemDetails/> 
+      {/* <ItemDetails/>  */}
     </div>
   )
 }
