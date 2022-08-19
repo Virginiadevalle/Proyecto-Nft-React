@@ -1,0 +1,202 @@
+{
+  "usuarios": [
+    {
+      "photo": "C:\\fakepath\\c214985c332ace152aa28294d0ca77ba17fa2166-760x400.jpg",
+      "nombre": "Edwar ",
+      "lastname": "Elrik",
+      "correo": "edwar@elrik.com",
+      "password": "edwar.12345",
+      "id": 1
+    },
+    {
+      "photo": "C:\\fakepath\\938965 (1).png",
+      "nombre": "Raven",
+      "lastname": "Reyes",
+      "correo": "raven_reyes@gmail.com",
+      "password": "reyes.12345",
+      "id": 2
+    },
+    {
+      "photo": "C:\\fakepath\\59531.6.jpg",
+      "nombre": "Penny",
+      "lastname": "Roberth",
+      "correo": "Penny123@gmail.com",
+      "password": "roberth.123",
+      "id": 3
+    },
+    {
+      "photo": "C:\\fakepath\\17057941.jpg",
+      "nombre": "Kakaroto",
+      "lastname": "Goku",
+      "correo": "goku_123@gmail.com",
+      "password": "kakaroto_123",
+      "id": 4
+    },
+    {
+      "photo": "C:\\fakepath\\Kakashi-Hatake_Naruto-Shippuden_Fondos-Anime-HD.jpg",
+      "nombre": "Kakashi",
+      "lastname": "Hatake",
+      "correo": "hatake_12@gmail.com",
+      "password": "kakashi123",
+      "id": 5
+    },
+    {
+      "photo": "C:\\fakepath\\17026.jpg",
+      "nombre": "Gruth",
+      "lastname": "Gruth",
+      "correo": "Gruth3@gmail.com",
+      "password": "metano3",
+      "id": 6
+    },
+    {
+      "photo": "C:\\fakepath\\SL-TM-Imagen-Global-2462x1365-e1496658631128-1.jpg",
+      "nombre": "Luna",
+      "lastname": "Solvenson",
+      "correo": "solvenson6@gmail.com",
+      "password": "luna_sol123",
+      "id": 7
+    },
+    {
+      "photo": "C:\\fakepath\\288b448a63f075ef14066313856d8a6e.jpg",
+      "nombre": "Mabel",
+      "lastname": "Pen",
+      "correo": "pen_123@gmail.com",
+      "password": "penpen1",
+      "id": 8
+    }
+  ],
+  "items": [
+    {
+      "file": "C:\\fakepath\\thumb-1920-938948.jpg",
+      "item_name": "Edwar elrik",
+      "description": "Alquimista de acero",
+      "item_price": 500,
+      "size": 375353,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "1",
+      "id": 1
+    },
+    {
+      "file": "C:\\fakepath\\fullmetal alchemist alphonse elric edward elric 1920x1080 wallpaper_www.wallpaperhi.com_67.jpg",
+      "item_name": "Full Metal Alchemist",
+      "description": "PEdwar Elrik y Alfons Elrik",
+      "item_price": 200,
+      "size": 54272,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "1",
+      "id": 2
+    },
+    {
+      "file": "C:\\fakepath\\288b448a63f075ef14066313856d8a6e.jpg",
+      "item_name": "Mabel",
+      "description": "Mabel con su abrigo rosa",
+      "item_price": 300,
+      "size": 298469,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "1",
+      "id": 3
+    },
+    {
+      "file": "C:\\fakepath\\25212.jpg",
+      "item_name": "Lisa",
+      "description": "Lisa la inteligente",
+      "item_price": 600,
+      "size": 45657,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "1",
+      "id": 4
+    },
+    {
+      "file": "C:\\fakepath\\20289.jpg",
+      "item_name": "Gravity",
+      "description": "City Of Gravity Falls",
+      "item_price": 100,
+      "size": 5868763,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "2",
+      "id": 5
+    },
+    {
+      "file": "C:\\fakepath\\4595.jpg",
+      "item_name": "Sasuke",
+      "description": "warrior of the village of the leaf",
+      "item_price": 300,
+      "size": 5578,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "2",
+      "id": 6
+    },
+    {
+      "file": "C:\\fakepath\\4602.jpg",
+      "item_name": "Dark birds",
+      "description": "Boy with mask",
+      "item_price": 400,
+      "size": 756,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "3",
+      "id": 7
+    },
+    {
+      "file": "C:\\fakepath\\306909.jpg",
+      "item_name": "Rapunzel ",
+      "description": "Sitting on a rock admiring a flower",
+      "item_price": 100,
+      "size": 78687,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "4",
+      "id": 8
+    },
+    {
+      "file": "C:\\fakepath\\25203.jpg",
+      "item_name": "Barth",
+      "description": "Yellow",
+      "item_price": 500,
+      "size": 78686,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "5",
+      "id": 9
+    },
+    {
+      "file": "C:\\fakepath\\2aed537985b7980f83c40f40e970ffc5.png",
+      "item_name": "Shinchan",
+      "description": "Lying on the grass ",
+      "item_price": 300,
+      "size": 752,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "6",
+      "id": 10
+    },
+    {
+      "file": "C:\\fakepath\\393899.jpg",
+      "item_name": "Irom Man",
+      "description": "Flying",
+      "item_price": 1000,
+      "size": 7458,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "7",
+      "id": 11
+    },
+    {
+      "file": "C:\\fakepath\\25212.jpg",
+      "item_name": "Lisa",
+      "description": "the most intelligent\n",
+      "item_price": 200,
+      "size": 7457,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "8",
+      "id": 12
+    }
+  ]
+}

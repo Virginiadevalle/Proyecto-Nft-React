@@ -2,11 +2,12 @@ import React from "react";
 import { ErrorMessage, useFormik } from "formik";
 import * as Yup from "yup";
 import { useState } from "react";
-import AlertaError from "../AlertaError";
+import AlertaError from "../utilities/AlertaError";
+import axios from "axios";
+
+
 
 function CreateFormulario() {
-  const [item, setItem] = useState([]);
-
   const formik = useFormik({
     initialValues: {
       file: "",
@@ -18,9 +19,22 @@ function CreateFormulario() {
       no_of_copies: "",
     },
 
-    onSubmit: (values) => {
-      let nuevoItem = values
-      setItem([...item, nuevoItem]);
+    onSubmit: (values, {resetForm}) => {
+        let usuario_id = 8
+        axios({
+                method: 'post',
+                url: `http://localhost:4000/usuario/${usuario_id}/items`,
+                data: JSON.stringify(values),
+                headers: {
+                  "Content-Type": "application/json",
+                },
+              })
+              .then(resp => {
+                console.log(resp.data);
+            }).catch(error => {
+                console.log(error);
+            });
+      resetForm()
     },
 
     validationSchema: Yup.object().shape({
@@ -52,13 +66,13 @@ function CreateFormulario() {
 
   return (
     <>
-      <div className="col-12 col-lg-8  mt-5 mt-lg-0">
+      
         <h5 className="text-primary-color font-akshar font-weight-bold ">
           <u>Create</u>
         </h5>
         <h3 className="text-white  mb-5 font-akshar display-3">Create Item</h3>
 
-        <div className="bg-cards p-md-5 border-card">
+        <div className="bg-cards p-3 p-md-5 border-card">
           <form onSubmit={formik.handleSubmit}>
             <div className=" ">
               <label htmlFor="file" className="form-label text-white">
@@ -185,8 +199,7 @@ function CreateFormulario() {
             ></input>
           </form>
         </div>
-      </div>
-    </>
+      </>
   );
 }
 

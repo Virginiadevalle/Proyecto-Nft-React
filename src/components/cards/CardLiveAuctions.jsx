@@ -1,8 +1,9 @@
 import React from "react";
+import { Link  } from 'react-router-dom'
 
-function CardLiveAuctions() {
+function CardLiveAuctions({item}) {
   return (
-    <div className="col-12 col-md-6  col-lg-3 mb-4  ">
+    < >
       <div className="card border-card  p-3  bg-cards me-0  ">
         <div className="contain-img position-relative">
           <img
@@ -17,12 +18,12 @@ function CardLiveAuctions() {
         <div className="card-body px-0 pb-0 ">
           <div className="contain-title text-white d-flex justify-content-between ">
             <h5 className="card-title">
-              <a
+              <Link
                 className="text-decoration-none text-white"
-                href="/items-details.html"
+                to={"/item-details"}
               >
-                Domain Names
-              </a>
+                {item.item_name}
+              </Link>
             </h5>
             <div className="text-gris">
               <i className="bi bi-heart pe-1"></i>
@@ -37,11 +38,11 @@ function CardLiveAuctions() {
           </div>
           <div className="contain-price d-flex justify-content-between bg-negro-claro p-1 rounded">
             <span className="text-gris">Price</span>
-            <span className="text-white">5.4 ETH</span>
+            <span className="text-white">{item.item_price} ETH</span>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

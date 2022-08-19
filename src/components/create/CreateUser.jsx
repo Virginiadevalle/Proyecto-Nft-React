@@ -1,28 +1,54 @@
 import React from 'react'
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 
-function CreateUser() {
+
+const url = 'http://localhost:4000/usuarios'
+function CreateUser({id}) {
+  const [user, setUser] = useState({});
+useEffect(() => {
+    let usuario_id = id
+      axios({
+        method: 'get',
+        url: `${url}/${usuario_id}`,
+      })
+
+      .then(resp => {
+        setUser(resp.data)
+      })
+      
+      .catch(error => {
+        console.log(error);
+      });
+
+ 
+}, [])
+
+     
+      
   return (
 
-    <div className="col-12 col-lg-3 bg-cards p-3 pt-5 border-card mh-370 me-2 ">
-              <div className="text-center">
+    <div className='d-flex flex-column align-items-center bg-cards py-5 px-3  border-card   me-2'>
+              <div className="text-center img-80px">
                 <img
-                  src="/src/img/avatar-author-profile.jpg"
-                  className="rounded-circle img-author "
+                  src='/src/img/c214985c332ace152aa28294d0ca77ba17fa2166-760x400.jpg'
+                  className="rounded-circle img-fluid img-author "
                   alt=""
                 />
               </div>
               <div className="contain-title text-center ">
-                <h5 className="card-title my-3">
-                  <a
+                <h5 className="card-title  my-3">
+                  <Link
                     className="text-decoration-none text-white  "
-                    href="/items-details.html"
+                    to={"/author-profile"}
                   >
-                    Einstein Bariya
-                  </a>
+                    {user.nombre} {user.lastname}
+                  </Link>
                 </h5>
 
                 <a href="#" className="text-white">
-                  Einstein Bariya011.com
+                  {user.correo}
                 </a>
 
                 <ul className="d-flex justify-content-center p-3 m-0 ">

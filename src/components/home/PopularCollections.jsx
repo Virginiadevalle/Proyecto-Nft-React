@@ -1,5 +1,5 @@
 import React from "react";
-import CardPopularCollections from "../CardPopularCollections";
+import CardPopularCollections from "../cards/CardPopularCollections";
 
 function PopularCollections() {
   return (

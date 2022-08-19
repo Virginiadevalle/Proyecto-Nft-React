@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import NavHeader from "../NavHeader";
 
 const Header = () => {
@@ -20,12 +21,12 @@ const Header = () => {
               </p>
             </div>
             <div>
-              <a href="/explore.html" className="btn btn-danger me-1">
+              <Link to={"/explore"} className="btn btn-danger me-1">
                 Explore
-              </a>
-              <a href="/create.html" className="btn btn-outline-secondary">
+              </Link>
+              <Link to={"/create"} className="btn btn-outline-secondary">
                 Create
-              </a>
+              </Link>
             </div>
           </div>
         </div>

@@ -1,7 +1,29 @@
 import React from "react";
-import CardTopSellers from "../CardTopSellers";
+import CardTopSellers from "../cards/CardTopSellers";
+import axios from 'axios'
+import {useState, useEffect} from 'react'
 
+
+const url = 'http://localhost:4000/usuarios'
 function TopSellers() {
+  const [sellers, setSellers] = useState([])
+
+  useEffect(() => {
+    axios({
+      method: 'get',
+      url: `${url}?_page=1&_limit=10`
+    })
+    .then(({data}) =>{
+      // console.log(data);
+      setSellers(data)
+    })
+    .catch(() => {
+      console.log('error')
+    })
+  }, [])
+  
+
+
   return (
     <section className="seccion-top-sellers bg-negro py-5">
       <div className="container">
@@ -12,7 +34,14 @@ function TopSellers() {
             </h5>
             <h3 className="text-white  font-akshar display-3">Top Sellers</h3>
           </div>
-          <CardTopSellers />
+          {sellers.map((seller)=>(
+            <div key={seller.id} className="col-12 col-md-6 col-lg-4 pb-4 ">
+              <CardTopSellers
+              seller={seller}
+              />
+          </div>
+          ))}
+          
         </div>
       </div>
     </section>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CardExplore from "../CardExplore";
+import CardExplore from "../cards/CardExplore";
 
 
 const tabs = [

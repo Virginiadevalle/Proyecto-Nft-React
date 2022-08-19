@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function CardExplore() {
   return (
@@ -17,12 +18,12 @@ function CardExplore() {
         <div className="card-body px-0 pb-0 ">
           <div className="contain-title text-white d-flex justify-content-between ">
             <h5 className="card-title">
-              <a
-                href="/items-details.html"
+            <Link
                 className="text-decoration-none text-white"
+                to={"/item-details"}
               >
                 Domain Names
-              </a>
+              </Link>
             </h5>
             <div className="text-gris">
               <i className="bi bi-heart pe-1"></i>
