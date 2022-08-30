@@ -1,13 +1,37 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-function CardExplore() {
+
+const url = 'http://localhost:4000/usuarios'
+function CardExplore({item}) {
+
+  const [user, setUser] = useState([]);
+  useEffect(() => {
+      let usuario_id = item.usuarioId
+        axios({
+          method: 'get',
+          url: `${url}/${usuario_id}`,
+        })
+  
+        .then(({data}) => {
+          setUser(data)
+        })
+        
+        .catch(error => {
+          console.log(error);
+        });
+  
+   
+  }, [])
+
+
   return (
-    <div className="col-12 col-md-6 col-lg-3 mb-4">
+    <>
       <div className="card p-3 bg-cards me-0  ">
         <div className="contain-img position-relative">
           <img
-            src="/src/img/imageCards.png"
+            src="/src/img/c214985c332ace152aa28294d0ca77ba17fa2166-760x400.jpg"
             className="card-img-top "
             alt="..."
           />
@@ -20,9 +44,9 @@ function CardExplore() {
             <h5 className="card-title">
             <Link
                 className="text-decoration-none text-white"
-                to={"/item-details"}
+                to={`/item-details/${item.id}`}
               >
-                Domain Names
+                {item.item_name}
               </Link>
             </h5>
             <div className="text-gris">
@@ -49,7 +73,7 @@ function CardExplore() {
           <div className="contain-autions pt-2 d-flex justify-content-between align-items-center ">
             <div className="d-flex">
               <span className="text-gris">Owned By</span>
-              <h5 className="text-white ps-1 m-0">Charley</h5>
+              <h5 className="text-white ps-1 m-0">{user.nombre}</h5>
             </div>
             <span className="text-white">
               <i className="bi bi-arrow-up-short text-danger"></i>5.4 ETH
@@ -67,7 +91,7 @@ function CardExplore() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

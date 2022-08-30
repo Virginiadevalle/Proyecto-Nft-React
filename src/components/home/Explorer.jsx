@@ -1,5 +1,7 @@
-import React, { useState } from "react";
 import CardExplore from "../cards/CardExplore";
+import axios from 'axios'
+import { useState,  useEffect } from "react";
+
 
 
 const tabs = [
@@ -25,9 +27,26 @@ const tabs = [
   },
 ]
 
-
+const url = 'http://localhost:4000/items'
 function Explorer() {
   const [tab, setTab] = useState("ALL NFTs");
+  const [ items , setItems] =useState([]);
+
+  useEffect(() => {
+    axios({
+      method: 'get',
+      url: `${url}?_page=1&_limit=8`
+    })
+    .then(({data})=> {
+      setItems(data)
+    })
+    .catch(()=> {
+      console.log('error');
+    })
+    
+  }, [])
+  
+
 
   return (
     <section className="seccion-explore bg-negro-claro py-5">
@@ -54,7 +73,11 @@ function Explorer() {
               </div>
             </div>
           </div>
-          <CardExplore  />
+          {items.map((item)=> (
+          <div key={item.id} className="col-12 col-md-6 col-lg-3 mb-4">
+          <CardExplore item={item}/>
+          </div>
+          ))}
           <div className="text-center  pt-4 pb-5 ">
             <a href="#" className="btn btn-danger">
               Load More

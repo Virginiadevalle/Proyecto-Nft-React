@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 
 function CardItemAuthor({item}) {
-  const {item_price, description, } = item
+  const {item_price, item_name, } = item
 
 
   return (
@@ -37,7 +37,7 @@ function CardItemAuthor({item}) {
                 className="text-decoration-none text-white ps-3"
                 to={"/item-details"}
               >
-                {description}
+                {item_name}
               </Link>
             </h5>
           </div>

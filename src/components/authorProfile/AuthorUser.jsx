@@ -5,11 +5,10 @@ import { Link } from 'react-router-dom';
 
 
 const url = 'http://localhost:4000/usuarios'
-function CreateUser() {
+function AuthorUser({id}) {
   const [user, setUser] = useState([]);
 useEffect(() => {
-    let usuario_id = 3
-    
+    let usuario_id = id
       axios({
         method: 'get',
         url: `${url}/${usuario_id}`,
@@ -85,4 +84,4 @@ useEffect(() => {
   )
 }
 
-export default CreateUser
+export default AuthorUser

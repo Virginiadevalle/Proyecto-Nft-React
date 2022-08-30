@@ -19,6 +19,7 @@ function Create() {
             <div className="row">
               <div className="col-12 col-md-6 col-lg-3  ">
                 <CreateUser />
+                
               </div>
               <div className="col-12 col-lg-8 mt-5 mt-lg-0">
                 <CreateFormulario />

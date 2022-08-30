@@ -197,6 +197,28 @@
       "no_of_copies": 1,
       "usuarioId": "8",
       "id": 12
+    },
+    {
+      "file": "C:\\fakepath\\67347.jpg",
+      "item_name": "Anime",
+      "description": "Chicos en el agua",
+      "item_price": 100,
+      "size": 656878,
+      "royality": 9,
+      "no_of_copies": 1,
+      "usuarioId": "1",
+      "id": 13
+    },
+    {
+      "file": "C:\\fakepath\\digimon.jpg",
+      "item_name": "Digimon",
+      "description": "Todos los personajes de Digimon",
+      "item_price": 1000,
+      "size": 8653,
+      "royality": 10,
+      "no_of_copies": 1,
+      "usuarioId": "3",
+      "id": 14
     }
   ]
 }

@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import  { useParams } from "react-router-dom";
+import AuthorUser from "../components/authorProfile/AuthorUser";
 import CardItemAuthor from "../components/authorProfile/CardItemAuthor";
 import CreateUser from "../components/create/CreateUser";
 import Footer from "../components/Footer";
@@ -39,7 +40,7 @@ function AuthorProfile() {
           <div className="container">
             <div className="row">
               <div className="col-12 col-md-6 col-lg-3 ">
-                <CreateUser id={id}/>
+                <AuthorUser id={id}/>
               </div>
               <div className="col-12 col-lg-9 my-3 my-lg-0">
                 <MenuFilter />

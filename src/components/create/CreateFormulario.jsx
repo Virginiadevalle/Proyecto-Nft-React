@@ -20,7 +20,8 @@ function CreateFormulario() {
     },
 
     onSubmit: (values, {resetForm}) => {
-        let usuario_id = 8
+        let usuario_id = 3
+        
         axios({
                 method: 'post',
                 url: `http://localhost:4000/usuario/${usuario_id}/items`,

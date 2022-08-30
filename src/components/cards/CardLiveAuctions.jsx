@@ -7,7 +7,7 @@ function CardLiveAuctions({item}) {
       <div className="card border-card  p-3  bg-cards me-0  ">
         <div className="contain-img position-relative">
           <img
-            src="/src/img/imageCards.png"
+            src="/src/img/c214985c332ace152aa28294d0ca77ba17fa2166-760x400.jpg"
             className="card-img-top"
             alt="live actions"
           />
@@ -20,7 +20,7 @@ function CardLiveAuctions({item}) {
             <h5 className="card-title">
               <Link
                 className="text-decoration-none text-white"
-                to={"/item-details"}
+                to={`/item-details/${item.usuarioId}`}
               >
                 {item.item_name}
               </Link>

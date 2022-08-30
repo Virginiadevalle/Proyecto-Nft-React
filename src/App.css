@@ -388,3 +388,11 @@ html {
   height: 40px;
   
 }
+.width-100px{
+  width: 100px;
+}
+
+.img-1x1{
+  aspect-ratio: 4/5 !important;
+  object-fit: cover !important;
+}
